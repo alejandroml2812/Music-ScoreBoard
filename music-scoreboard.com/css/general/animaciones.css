@@ -1,0 +1,63 @@
+@keyframes rotarZ {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.rotarZ {
+    animation-name: rotarZ;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.rotarZ-lento {
+    animation-name: rotarZ;
+    animation-duration: 36s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rebotarY {
+    from {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
+
+.rebotarY {
+    animation-name: rebotarY;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes prompt {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.prompt {
+    animation-name: prompt;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+
+.prompt-contenedor {
+    overflow-x: hidden;
+}

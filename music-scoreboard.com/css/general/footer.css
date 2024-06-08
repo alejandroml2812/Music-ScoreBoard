@@ -1,0 +1,120 @@
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+}
+
+footer #links {
+    background-color: var(--oscuro);
+    color: white;
+    padding: 20px;
+}
+
+footer #links ul {
+    list-style: none;
+}
+
+footer #links a {
+    color: var(--claro);
+}
+
+footer #copyright {
+    grid-column: 1 / 4;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer aside::before {
+    position: absolute; 
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: black;
+    opacity: 0.6;
+}
+
+footer aside {
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    z-index: 0;
+    grid-column: 2 / 4;
+    display: flex;
+    position: relative;
+    background: url(/img/fondos/compositor.jpg);
+    color: var(--claro);
+    justify-content: space-between;
+    padding: 20px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+footer #publicidad {
+    padding: 4em;
+    box-sizing: border-box;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer #creditos {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    height: fit-content;
+    align-self: flex-end;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    max-height: 300px;
+
+    background-color: var(--primario);
+    border-radius: 20px;
+    margin: 20px;
+    color: var(--oscuro);
+    box-shadow: 0 0 20px black; 
+}
+
+footer #creditos ul {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style: inside;
+}
+
+footer #creditos ul li a {
+    color: var(--dark);
+    display: inline;
+}
+
+footer #redes {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+footer address {
+    font-size: 11pt;
+    font-style: italic;
+    font-family: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}

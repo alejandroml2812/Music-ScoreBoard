@@ -1,0 +1,70 @@
+main {
+    color: var(--claro);
+    display: flex;
+    box-sizing: border-box;
+    gap: 20px;
+    width: 100%;
+}
+main section {
+    max-width: 1040px;
+}
+h1 {
+    font-size: 58pt;
+}
+main .categoria {
+    padding: 4em;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    max-width: 800px;
+}
+.categoria > h1, .categoria > h2{
+    justify-content: flex-start;
+}
+aside {
+    flex-grow: 1;
+}
+aside .artistas-preview {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: min-content 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+aside .artistas .titulo-seccion {
+    grid-column: 1 / 2;
+}
+aside .artistas .artista:nth-of-type(n) {
+    grid-column: auto;
+    grid-row: auto;
+}
+aside .artistas .artista {
+    align-items: stretch;
+    position: relative;
+    min-height: 300px;
+}
+aside .artistas .artista .contenido {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.imagen-contenedor {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+aside {
+    padding: 20px;
+}
+
+aside p {
+    padding: 20px;
+    text-align: justify;
+}

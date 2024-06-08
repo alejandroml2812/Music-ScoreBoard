@@ -1,0 +1,544 @@
+   /*general*/
+   nav {
+       flex-direction: column;
+       gap: 20px;
+       margin: 0;
+       width: 100%;
+       padding: 20px;
+       box-sizing: border-box;
+       display: flex;
+       align-items: center;
+       height: auto;
+   }
+
+   nav ul {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+       width: 50%;
+   }
+
+   nav ul li {
+       width: 100%;
+       height: 50px;
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+   }
+
+   nav ul li a {
+       width: 100%;
+   }
+
+   nav ul li a::before {
+       bottom: auto;
+       left: 0;
+       width: 7px;
+       height: 0;
+   }
+
+   nav ul li a:hover::before {
+       width: 7px;
+       height: 100%;
+   }
+
+   nav ul li a.actual::before {
+       background-color: var(--secundario);
+       height: 100%;
+   }
+
+   nav ul li a.actual {
+       border-bottom: none;
+   }
+
+   main.index {
+       box-sizing: border-box;
+   }
+
+   .vinilo-titulo {
+       flex-direction: column;
+   }
+
+   .vinilo-titulo .contenido {
+       overflow: visible;
+   }
+
+   .vinilo-titulo .contenido .bocadillo {
+       width: auto;
+       bottom: 144px;
+       right: 21px;
+       font-size: 9pt;
+       z-index: 1;
+       padding: 10px;
+       max-width: 156px;
+       border-radius: 10px;
+   }
+
+   .vinilo-titulo .persona-contenedor {
+       position: relative;
+       background-color: #ffffff96;
+       position: absolute;
+       bottom: 0;
+       width: 100%;
+       height: 200px;
+       right: 0;
+       border-radius: 0 0 20px 20px;
+
+       background-size: contain;
+       background-position: 100% 50%;
+       background-repeat: no-repeat;
+   }
+
+   .vinilo-titulo .persona-contenedor::before {
+       display: none;
+   }
+
+   /*ajustar index*/
+   main.index {
+       display: flex;
+       flex-direction: column;
+       width: 100%;
+   }
+
+   .titulo-seccion {
+       font-size: 24pt;
+   }
+
+   footer #creditos {
+       box-sizing: border-box;
+       margin: 0;
+       width: auto;
+   }
+
+   main.index aside .titulo-seccion {
+       font-size: 48pt;
+   }
+
+   footer aside {
+       background-position: 50% 50%;
+   }
+
+   footer {
+       display: flex;
+       flex-direction: column;
+       min-height: auto;
+   }
+
+   footer #links {
+       display: flex;
+       justify-content: space-around;
+       flex-direction: column;
+   }
+
+   aside.destacado .album .content {
+       justify-content: center;
+       gap: 40px;
+   }
+
+   .categorias-preview .link-card {
+       align-self: flex-start;
+   }
+
+   .artistas-preview {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+       gap: 20px;
+       padding: 20px;
+       box-sizing: border-box;
+   }
+
+   .artistas-preview .artista:nth-child(n) {
+       grid-row: auto;
+       grid-column: auto;
+   }
+
+   .artistas-preview .titulo-seccion {
+       grid-column: auto;
+   }
+
+   .artistas-preview .artista {
+       width: 100%;
+       height: 100%;
+       min-height: 350px;
+   }
+
+   .artistas-preview .link-card {
+       align-self: flex-start;
+   }
+
+   /*ajustar categorias*/
+   main {
+       min-height: auto;
+       box-sizing: border-box;
+   }
+
+   footer {
+       box-sizing: border-box;
+   }
+
+   main.index aside {
+       min-width: auto;
+   }
+
+   section.categorias-preview {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+   }
+
+   section.categorias-preview .categoria {
+       grid-row: auto;
+       grid-column: auto;
+   }
+
+   section.categorias-preview .titulo-seccion {
+       grid-column: auto;
+   }
+
+   section.categorias {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+   }
+
+   section.categorias .categoria {
+       transition: all 0.35s;
+   }
+
+   section.categorias .categoria:hover {
+       height: 400px;
+   }
+
+   section.categorias .categoria {
+       min-height: auto;
+       height: 200px;
+   }
+
+   section.categorias .categoria:nth-child(n) {
+       grid-row: auto;
+       grid-column: auto;
+   }
+
+   section.categorias .titulo-seccion {
+       grid-column: auto;
+   }
+
+   /*ajustar categoria*/
+
+   main.main-categoria {
+       flex-direction: column;
+   }
+
+   main.main-categoria .categoria {
+       padding: 20px;
+       box-sizing: border-box;
+   }
+
+   main.main-categoria .artistas-preview {
+       padding: 0;
+       grid-template-rows: auto;
+   }
+
+
+   main.main-categoria aside .artistas {
+       padding: 0;
+   }
+
+   main.main-categoria .artistas-preview .artista {
+       height: 200px;
+       min-height: auto;
+   }
+
+   main.main-categoria .artistas-preview .artista:hover {
+       height: 400px;
+   }
+
+   main .categoria {
+       max-width: none;
+       width: 100%;
+       box-sizing: border-box;
+   }
+
+   section.artistas {
+       grid-template-columns: repeat(3, 250px);
+       grid-template-rows: repeat(3, 350px);
+       gap: 20px;
+       padding: 20px;
+       box-sizing: border-box;
+       width: 100%;
+       align-items: center;
+       justify-content: center;
+   }
+
+   section.artistas .seccion-titulo {
+       grid-column: 1 / 4;
+       grid-row: 1 / 2;
+   }
+
+   section.artistas .artista:nth-of-type(n) {
+       grid-row: auto;
+       grid-column: auto;
+   }
+
+   section.artistas .artista {
+       width: 100%;
+       height: 100%;
+   }
+
+   aside .imagen-contenedor {
+       width: 100%;
+   }
+
+
+
+   /*ajustar artistas*/
+
+   .main-artistas .artistas-paginados-contenedor {
+    padding: 0;
+   }
+
+   .main-artistas .artistas-paginados .artista {
+    height: 200px;
+   }
+
+   .artistas-paginados {
+       grid-template-columns: repeat(3, 250px);
+       grid-template-rows: min-content 350px;
+       padding: 0px;
+       gap: 20px;
+       box-sizing: border-box;
+   }
+
+   .artistas-paginados .artista {
+       width: 100%;
+       height: 100%;
+   }
+
+   .artistas-paginados .titulo-seccion {
+       grid-column: 1 / 4;
+   }
+
+   .artistas-paginados .artista:nth-child(n) {
+       grid-row: auto;
+       grid-column: auto;
+   }
+
+   /*ajustar artista*/
+   main.main-artista {
+       flex-direction: column;
+       box-sizing: border-box;
+       padding: 20px;
+   }
+
+   main.main-artista .contenido {
+       padding: 0;
+   }
+
+   main.main-artista aside {
+       min-width: auto;
+       box-sizing: border-box;
+       min-width: auto;
+       align-items: center;
+       width: 100%;
+   }
+
+   main.main-artista aside .aside-contenido {
+       width: 100%;
+   }
+
+   main.main-artista aside .canciones-populares {
+       padding: 5px;
+       align-items: stretch;
+   }
+
+   main.main-artista aside .cancion-popular li {
+       flex-direction: column;
+   }
+
+   main.main-artista aside .cancion-popular li .puntuacion-contenedor {
+       flex-direction: column;
+   }
+
+   main.main-artista aside .cancion-popular li .menu {
+       padding: 5px;
+       gap: 5px;
+   }
+
+   main.main-artista aside .cancion-popular li .boton-comentar {
+       width: fit-content;
+       align-self: center;
+       margin: 10px;
+       box-sizing: border-box;
+   }
+
+   main.main-artista aside .cancion-popular li .puntuacion-contenedor .icono-fav {
+       position: absolute;
+       bottom: 0;
+       right: 0;
+       margin: 20px;
+       box-sizing: border-box;
+   }
+
+   main.main-artista aside .aside-contenido {
+       padding: 0;
+   }
+
+   main.main-artista aside .imagen-contenedor {
+       min-height: auto;
+       max-width: 300px;
+   }
+
+   main.main-artista .discos {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+       padding: 20px;
+       box-sizing: border-box;
+   }
+
+   main.main-artista .titulo-seccion {
+       font-size: 13pt;
+   }
+
+   main.main-artista .discos .disco {
+       grid-row: auto;
+       grid-column: auto;
+   }
+
+   /*album*/
+
+   main.main-album {
+       flex-direction: column;
+       box-sizing: border-box;
+       display: flex;
+       align-items: stretch;
+       padding: 20px;
+   }
+
+   main.main-album section.contenido,
+   main.main-album section.contenido div.contenido {
+       padding: 0;
+   }
+
+   main.main-album section.contenido {
+       display: flex;
+       flex-direction: column;
+   }
+
+   main.main-album aside .canciones-populares {
+       padding: 5px;
+       align-items: stretch;
+   }
+
+   main.main-album aside .cancion-popular li {
+       flex-direction: column;
+   }
+
+   main.main-album aside .cancion-popular li .puntuacion-contenedor {
+       flex-direction: column;
+   }
+
+   main.main-album aside .cancion-popular li .menu {
+       padding: 20px;
+       gap: 20px;
+   }
+
+   main.main-album aside .cancion-popular li .boton-comentar {
+       width: fit-content;
+       align-self: center;
+       margin: 10px;
+       box-sizing: border-box;
+   }
+
+   main.main-album aside .cancion-popular li .puntuacion-contenedor .icono-fav {
+       position: absolute;
+       bottom: 0;
+       right: 0;
+       margin: 20px;
+       box-sizing: border-box;
+   }
+
+   /*artistas dentro de una categoria*/
+   .artistas-paginados {
+       grid-template-columns: 1fr;
+       grid-template-rows: auto;
+   }
+
+   .artistas-paginados .titulo-seccion {
+       grid-column: auto;
+       padding: 0;
+   }
+
+   .artistas-paginados .artista:hover {
+       height: 400px;
+   }
+
+   .artistas-paginados .artista {
+       height: 250px;
+   }
+
+   /*login*/
+   nav {
+       background-color: var(--oscuro);
+   }
+
+   body:has(main.login) {
+       gap: 0;
+   }
+
+   main.login {
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    box-sizing: border-box;
+   }
+
+   main.login .contenedor_principal {
+       display: flex;
+       flex-direction: column-reverse;
+       gap: 20px;
+   }
+
+   main.login .fondo-login, main.login .fondo-registro {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+
+   main.login .fondo {
+    transition: all 0.35s;
+   }
+
+   main.login form {
+    padding: 20px;
+    width: 100%;
+   }
+
+   /*populares*/
+   main.popular section.categorias-preview {
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+   }
+
+   main.popular section.categorias-preview .categoria {
+    height: 200px;
+   }
+
+   main.popular section.categorias-preview .categoria:hover {
+    height: 400px;
+   }
+
+   main.popular .discos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+   }
+
+   main.popular .discos .disco {
+    min-height: 200px;
+   }

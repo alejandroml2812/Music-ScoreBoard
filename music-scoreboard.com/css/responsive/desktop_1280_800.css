@@ -1,0 +1,37 @@
+nav {
+    background-color: var(--oscuro);
+}
+
+main.login {
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0;
+    min-height: auto;
+}
+
+.contenedor_principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0;
+}
+
+.fondo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.categorias-preview {
+    grid-template-rows: auto;
+}
+
+section.categorias .categoria {
+    max-height: 350px;
+}
+
+.artistas-paginados .artista {
+    width: 100%;
+    height: 100%;
+}

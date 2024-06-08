@@ -1,0 +1,89 @@
+.canciones-populares {
+    display: flex;
+    flex-direction: column;
+    max-height: 70vh;
+    height: fit-content;
+    max-height: 50vh;
+    overflow-y: scroll;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+ul.cancion-popular {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    position: relative;
+}
+
+ul.cancion-popular h3,
+ul.cancion-popular p {
+    margin: 5px;
+}
+
+ul.cancion-popular li {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    background-color: var(--secundario);
+    color: var(--oscuro);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 10pt;
+    justify-content: space-between;
+    position: relative;
+}
+
+ul.cancion-popular li .cancion-artista {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 200px;
+}
+
+ul.cancion-popular li .cancion-artista img {
+    width: 100px;
+    border-radius: 5px;
+}
+
+.accion-boton {
+    border-radius: 200px;
+    border: 2px solid transparent;
+    background-color: transparent;
+    padding: 0;
+    pointer-events: all;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    position: relative;
+}
+
+.accion-boton:hover {
+    filter: drop-shadow(0px 0px 3px black);
+}
+.puntuacion-display-contenedor {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 0px;
+}
+.dinamico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}

@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/*ESTILO DEL FONDO*/
+body {
+    background-image: url(/img/fondos/login.jpg);
+    background-color: #ffe970a1 !important;
+    background-blend-mode: overlay;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--oscuro);
+    filter: saturate(0.5);
+}
+
+/*ESTILO DEL CONTENIDO PRINCIPAL*/
+main {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_principal {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+/*ESTILOS DEL FONDO*/
+.fondo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    background: var(--secundario-semitransparente);
+    border-radius: 20px;
+}
+
+.fondo div {
+    margin: 100px 40px;
+    color: var(--oscuro);
+}
+
+.fondo div p,
+.fondo div button {
+    margin-top: 30px;
+}
+
+.fondo div h3 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.fondo button {
+    padding: 10px 40px;
+    border: 2px solid var(--oscuro);
+    background: transparent;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--oscuro);
+    outline: none;
+}
+
+/*ESTILOS DE LOS FORMULARIOS*/
+.contenedor_login-registro {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+}
+
+.contenedor_login-registro form {
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #fffffff7;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor_login-registro form h2 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #21e849;
+}
+
+.contenedor_login-registro form input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: var(--secundario);
+    font-size: 16px;
+    outline: none;
+}
+
+.contenedor_login-registro form button {
+    padding: 10px 40px;
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    background-color: var(--primario);
+}
+
+.formulario-login {
+    opacity: 1;
+    display: block;
+}
+
+form .inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2em;
+}
+
+main {
+    margin-top: 50px;
+}
+
+.fondo {
+    max-width: 350px;
+    height: 300px;
+    flex-direction: column;
+    margin: auto;
+}
+
+.fondo div {
+    margin: 0px;
+    position: absolute;
+}
+
+.contenedor_login-registro form {
+    position: relative;
+}
+
+main.login .oculto {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+main.login form, main.login .fondo .fondo-login, main.login .fondo.registro {
+    transition: all 0.35s;
+}
+
+main.login form.oculto {
+    transform: translateX(150%);
+}
+
+main.login :not(form).oculto {
+    transform: translateY(150%);
+}
+
+main.login :not(.oculto) {
+    opacity: 1;
+}
+
+main {
+    overflow: hidden;
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #999999 !important;
+  background-color: #cccccc !important;
+  color: #666666 !important; 
+  pointer-events: none;
+}

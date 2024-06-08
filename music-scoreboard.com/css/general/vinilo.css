@@ -1,0 +1,105 @@
+.vinilo-titulo::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    content: " ";
+    background-image: url(/img/posters/presentacion.jpg);
+    background-size: cover;
+    background-position: 50%;
+    border-radius: 20px;
+    filter: brightness(0.4);
+}
+
+.vinilo-titulo {
+    position: relative;
+    display: flex;
+    border-radius: 20px;
+    margin: 20px;
+    box-sizing: border-box;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.vinilo {
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    aspect-ratio:  1 / 1;
+}
+
+.vinilo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.vinilo h2 {
+    width: 280px;
+    height: 280px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    text-align: center;
+    color: var(--claro);
+    border-radius: 300px;
+    
+    align-items: center;
+    justify-content: center;
+
+    mask-image: url('/img/iconos/mascara_vinilo.png');
+    background-color: #000000b3;
+
+    font-family: 'Major Mono Display';
+
+}
+
+.contenido {
+    display: flex;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.contenido .persona-contenedor::before {
+    position: absolute;
+    content: " ";
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-top: 300px solid transparent;
+    border-bottom: 0px solid transparent;
+    border-right: 150px solid #ffffff96;
+    z-index: -1;
+}
+.contenido .persona-contenedor {
+    position: relative;
+    background-color: #ffffff96;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    right: 0;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.contenido .persona {
+    width: 100%;
+    height: 100%;
+    border-radius: 0 0 20px 0;
+}
+
+.contenido div.bocadillo {
+    width: 40%;
+}
+

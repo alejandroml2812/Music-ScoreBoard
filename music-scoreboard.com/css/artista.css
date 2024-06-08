@@ -1,0 +1,117 @@
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+
+
+section.contenido {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 20px;
+    color: var(--claro);
+    max-width: 1040px;
+}
+
+main aside {
+    min-width: 600px;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+main aside .imagen-contenedor {
+    width: 100%;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    aspect-ratio: 1 / 1;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+main aside .imagen-contenedor img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: all 0.35s;
+}
+
+main aside .imagen-contenedor img:hover {
+    transform: scale(1.05);
+}
+
+main aside .aside-contenido {
+    padding: 20px;
+    border-radius: 20px;
+    min-height: 400px;
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+}
+
+aside .discos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+    max-height: 70vh;
+    overflow-y: scroll;
+}
+
+/*grid-row maximo para que el mensaje vacio ocupe todo el ancho del grid*/
+.fila-completa {
+    grid-column: 1 / -1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+aside .titulo-seccion {
+    font-size: 24pt;
+}
+
+aside .disco:nth-of-type(1) {
+    grid-column: 1 / 4;
+}
+
+aside .disco {
+    border-radius: 10px;
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 200px;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+aside .disco:hover {
+    background-blend-mode: color;
+    background-color: rgba(0, 0, 0, 0.714);
+}
+
+aside .disco .contenido {
+    opacity: 0;
+}
+
+aside .disco:hover .contenido {
+    opacity: 1;
+    transition: all 0.25s;
+    color: white;
+}
+
+aside .disco .contenido {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}

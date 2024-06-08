@@ -1,0 +1,77 @@
+.menu.favoritos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    top: 100%;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+.menu-favoritos.oculto {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.menu.favoritos .votar {
+    border: 3px solid black;
+    color: black;
+    background: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all 0.25s;
+    position: relative;
+}
+
+.menu.favoritos .votar:hover {
+    transform: scale(1.05);
+}
+
+.menu.favoritos .icono-fav {
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: all 0.25s;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--oscuro);
+    padding: 5px;
+}
+
+.puntuacion {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.puntuacion-display-contenedor {
+    display: flex;
+    align-items: stretch;
+    width: fit-content;
+    gap: 0px;
+    flex-direction: column;
+}
+
+.boton-interaccion {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    border-radius: 100px;
+    border: transparent;
+    transition: all 0.25s;
+    background-color: transparent;
+}
+
+.boton-interaccion:hover {
+    transform: scale(1.05) rotateZ(5deg);
+    cursor: pointer;
+}

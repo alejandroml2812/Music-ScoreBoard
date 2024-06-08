@@ -1,0 +1,8 @@
+main.popular section.categorias-preview {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    box-sizing: border-box;
+}
+main.popular .titulo-seccion {
+    font-size: 24pt;
+}

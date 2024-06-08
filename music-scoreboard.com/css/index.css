@@ -1,0 +1,141 @@
+h2 {
+    font-size: 32px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+main aside {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    height: fit-content;
+    gap: 20px;
+    flex-grow: 1;
+    min-width: 450px;
+}
+
+main aside .album {
+    width: 100%;
+    height: fit-content;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+main aside .album .content::before {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 0 0 20px 20px;
+}
+
+main aside .album .content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+main aside .album .puntuacion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+main aside .album h2,
+main aside .album h3,
+main aside .album p {
+    margin: 0;
+}
+
+main aside .contenido {
+    flex-grow: 1;
+    display: flex;
+    text-align: justify;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    max-height: 100px;
+}
+
+/* width */
+main aside .contenido::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+main aside .contenido::-webkit-scrollbar-track {
+    background: white;
+}
+
+/* Handle */
+main aside .contenido::-webkit-scrollbar-thumb {
+    background: #515151;
+    border-radius: 10px;
+    height: 10px;
+}
+
+/* Handle on hover */
+main aside .contenido::-webkit-scrollbar-thumb:hover {
+    background: #454545;
+}
+
+.mis-favoritos {
+    background-color: var(--oscuro-claro);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+/*sobreescribir ligeramente categorias.css*/
+body section.categorias {
+    grid-template-rows: repeat(3, 250px);
+    grid-template-columns: repeat(3, 250px);
+}
+.categorias .categoria:nth-of-type(4) {
+    grid-column: 2 / 3;
+}
+
+/*sobrescribir ligeramente artistas.css*/
+.artista h2 {
+    color: var(--claro);
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.805);
+    width: 100%;
+}
+body section.artistas {
+    grid-template-rows: repeat(4, 250px);
+    grid-template-columns: repeat(3, 250px);
+}

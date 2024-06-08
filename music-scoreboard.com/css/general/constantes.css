@@ -1,0 +1,16 @@
+:root {
+    --oscuro: rgb(25, 25, 25);
+    --oscuro-desactivado: #565656;
+    --oscuro-claro: rgb(65, 65, 65);
+    --claro: rgb(237, 237, 237);
+    --blanco-oscuro: rgb(157, 157, 157);
+
+    --primario: #ffe970;
+    --primario-claro: #fff5b9;
+    --primario-oscuro: rgb(255, 153, 0);
+    --primario-transparente: #ffea7088;
+    
+    --secundario: rgb(176, 255, 173);
+    --secundario-semitransparente: rgba(176, 255, 173, 0.936);
+    --secundario-claro: rgb(227, 255, 226);
+}

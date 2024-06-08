@@ -1,0 +1,81 @@
+/*menu favoritos y menu comentarios*/
+.puntuacion-contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.menu.oculto {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+.menu {
+    opacity: 1;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: var(--primario);
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 0.35s;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    color: var(--oscuro);
+}
+
+.menu h2 {
+    margin: 5px;
+}
+
+.menu form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu .botonera {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu .cerrar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 3px solid transparent;
+}
+
+.menu .cerrar:hover {
+    border: 3px solid black;
+    padding: 3px;
+}
+
+.menu select {
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}

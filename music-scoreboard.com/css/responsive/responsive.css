@@ -1,0 +1,3 @@
+@import url(/css/responsive/tablet_1024_1366.css) (min-width: 377px) and (max-width: 1040px);
+@import url(/css/responsive/movil_375_667.css) (min-width: 0px) and (max-width: 376px);
+@import url(/css/responsive/desktop_1280_800.css) (min-width: 1041px);
