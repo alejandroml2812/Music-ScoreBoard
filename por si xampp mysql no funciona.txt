@@ -1,0 +1,40 @@
+ARREGLAR XAMPP SI SERVICIO MYSQL NO ABRE
+
+abrir C:/xampp/mysql, copiar data, copiar backup dentro de data, mysql deberia arrancar ya.
+
+dejar contraseña por defecto (linea comentada) en el archivo my.ini ->> boton config mysql en panel de control
+Entrar en xampp, ejecutar consola. Tenemos que cambiar la contraseña a la siguiente: r8Hl5OuZNNr1ilB
+
+Ejecutar el comando: mysqladmin -u root password
+escribir contraseña nueva: r8Hl5OuZNNr1ilB
+
+entrar en music-scoreboard.com/phpmyadmin y crear base de datos:
+CREATE DATABASE music_scoreboard_com COLLATE utf8mb4_unicode_ci
+
+importar alrchivo sql de la carpeta sql mas reciente que funcione.
+
+-------------------------------------------------------------
+
+CONFIGURAR VIRTUAL HOST PARA USAR DOMINIO SIMULADO:
+Ir a: C:\xampp\apache\conf\extra\httpd-vhosts.conf
+
+Añadir virtual host al final:
+
+<VirtualHost *:80>
+    ServerAdmin alex@admin.music-scoreboard.com
+    DocumentRoot "C:/xampp/htdocs/music-scoreboard.com"
+    ServerName music-scoreboard.com
+    ServerAlias www.music-scoreboard.com
+    ErrorLog "logs/music-scoreboard.com-error.log"
+    CustomLog "logs/music-scoreboard.com-access.log" common
+</VirtualHost>
+
+----------------------------------------------------------------
+
+CONFIGURAR PHPMYADMIN PARA QUE UTILICE LA NUEVA CONTRASEÑA CAMBIADA
+
+Modificar C:/xampp/phpMyAdmin/config.inc para incluir lo siguiente
+en la seccion authentication type and info
+/* Authentication type and info */
+$cfg['Servers'][$i]['user'] = 'root';
+$cfg['Servers'][$i]['password'] = 'r8Hl5OuZNNr1ilB';
